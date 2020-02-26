@@ -38,7 +38,7 @@ phase= phase1+phase2;
 T1 = k*beta1*L1/8;
 T2 = k*beta2*L2;
 
-T= exp(-(T1+T2));
+T= exp(-(T1+T2)).^2;
 
 figure
 imagesc(x,y,phase);
@@ -59,7 +59,7 @@ colormap(jet)
 figure
 sv = 50;   
 sc=2
-hold on% ‘Step’ Value
+hold on% â€˜Stepâ€™ Value
 h=quiver(X(1:sv:end,1:sv:end), Y(1:sv:end,1:sv:end), phase_dx(1:sv:end,1:sv:end), phase_dy(1:sv:end,1:sv:end))
 set(h,'AutoScale','on', 'AutoScaleFactor', sc)
 set(h,'LineWidth',1)
